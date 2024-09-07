@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import SectionRender from "./components/sectionRender";
+//
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+    <div className="overflow-y-auto snap-y snap-mandatory scroll-smooth h-screen w-full">
+      <SectionRender
+        className={
+          "h-75vh w-full bg-revolver-200 flex justify-center snap-start"
+        }
+      >
+        <a className="underline" href="/">
+          {"<Jatin Arora/>"}
         </a>
-      </header>
+        <div>
+          <h1 className="text-3xl font-bold">Frontend Developer.</h1>
+          <p>
+            I like to craft solid and scalable frontend products with great user
+            experiences.
+          </p>
+        </div>
+      </SectionRender>
+      <SectionRender
+        className={
+          "h-75vh w-full bg-revolver-900 flex justify-center snap-start"
+        }
+      >
+        <div>hello world</div>
+      </SectionRender>
     </div>
   );
 }
