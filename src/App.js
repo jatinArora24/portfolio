@@ -9,11 +9,14 @@ function App() {
 
       <nav className="w-full h-16 bg-revolver-100 fixed border-2 border-revolver-400 rounded-bl rounded-br z-50">
         <a
-          style={{ textShadow: "1px 1px #2e1e00" }}
-          className="rounded-full h-20 w-20 p-3 bg-revolver-100 text-gold-300 flex justify-center items-center z-50"
+          style={{
+            textShadow: "1px 1px #2e1e00",
+            fontFamily: "Bebas Neue, sans-serif",
+          }}
+          className="rounded-bl-0 rounded-tl-0 rounded-tr-full rounded-br-full h-40 w-56 p-3 bg-revolver-100 text-gold-300 flex justify-center items-center z-50 font-extrabold text-3xl border-b-4 border-revolver-400 m-r-2"
           href="/"
         >
-          {"<Jatin Arora/>"}
+          <div className="text-center">{"<JATIN ARORA/>"}</div>
         </a>
       </nav>
       <SectionRender
