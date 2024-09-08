@@ -1,0 +1,18 @@
+.photo-bg {
+  background-image: url("/public/assets/images/padhai2.jpg");
+  background-repeat: no-repeat;
+  filter: blur(4px);
+  filter: hue-rotate(90deg);
+  filter: drop-shadow(4px 4px 5px #2e1e00) hue-rotate(180deg) blur(2px)
+    sepia(20%);
+  border-radius: 80px;
+  height: 308px;
+  background-size: contain;
+  width: 368px;
+  float: right;
+  z-index: 0;
+  /* position: relative; */
+  bottom: 78px;
+  /* height: 100px;
+  width: 84px; */
+}
