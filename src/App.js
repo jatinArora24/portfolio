@@ -7,7 +7,7 @@ function App() {
     <div className="overflow-y-auto snap-y snap-mandatory scroll-smooth h-screen w-full">
       <div className="rounded-full h-20 w-20 p-3 bg-revolver-100 text-gold-300 flex justify-center items-center border-b-[86px] border-l-[60vw] border-revolver-400 fixed z-50"></div>
 
-      <nav className="w-full h-16 bg-revolver-100 fixed border-2 border-revolver-400 rounded-bl rounded-br z-50">
+      <nav className="w-full h-16 bg-revolver-100 fixed border-2 border-r-[6px] border-revolver-400 rounded-bl z-50">
         <a
           style={{
             textShadow: "1px 1px #2e1e00",
