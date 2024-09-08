@@ -24,19 +24,26 @@ function App() {
           "h-75vh w-full bg-revolver-700 flex justify-around snap-start pl-24 pr-24 pt-32 pb-32 flex-col"
         }
       >
-        <div>
-          <div className="bg-revolver-50 blur-3xl w-64 h-16 opacity-70 relative top-24"></div>
-
-          <h1
-            className="text-7xl font-bold text-shadow-lg text-gold-50"
-            style={{ textShadow: "4px 4px #2e1e00" }}
-          >
-            Frontend Developer.
-          </h1>
-          <p className="text-gold-100">
-            I like to craft solid and scalable frontend products with great user
-            experiences.
-          </p>
+        <div className="flex justify-between flex-col h-full">
+          <div className="bg-revolver-50 blur-3xl w-64 h-16 opacity-70 relative top-56"></div>
+          <div>
+            <h1
+              className="text-7xl font-bold text-shadow-lg text-gold-50"
+              style={{ textShadow: "4px 4px #2e1e00" }}
+            >
+              Frontend Developer.
+            </h1>
+            <p className="text-gold-100">
+              I like to craft solid and scalable frontend products with great
+              user experiences.
+            </p>
+          </div>
+          <div>
+            <p className="text-end bg-gold-50 text-revolver-900 font p-2 rounded-xl">
+              Welcome to my online portfolio, find my work in the work section
+              below
+            </p>
+          </div>
           {/* <div className="photo-bg"></div> */}
         </div>
       </SectionRender>
