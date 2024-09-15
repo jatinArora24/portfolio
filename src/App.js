@@ -1,12 +1,15 @@
 import "./App.css";
-import SectionRender from "./components/sectionRender";
+//import SectionRender from "./components/sectionRender";
 import "./components/cssArt.css";
+import React, { Suspense, lazy } from "react";
+
+const SectionRender = lazy(() => import("./components/sectionRender"));
+
 //
 function App() {
   return (
     <div className="overflow-y-auto snap-y snap-mandatory scroll-smooth h-screen w-full">
       <div className="rounded-full h-20 w-20 p-3 bg-revolver-100 text-gold-300 flex justify-center items-center border-b-[86px] border-l-[60vw] border-revolver-400 fixed z-50"></div>
-
       <nav className="w-full h-16 bg-revolver-100 fixed border-2 border-r-[6px] border-revolver-400 rounded-bl z-50">
         <a
           style={{
@@ -18,56 +21,73 @@ function App() {
         >
           <div className="text-center">{"<JATIN ARORA/>"}</div>
         </a>
-      </nav>
-      <SectionRender
-        className={
-          "h-75vh w-full bg-revolver-700 flex justify-around snap-start pl-24 pr-24 pt-32 pb-32 flex-col"
-        }
-      >
-        <div className="flex justify-between flex-col h-full">
-          <div className="bg-revolver-50 blur-3xl w-64 h-16 opacity-70 relative top-56"></div>
-          <div>
-            <h1
-              className="text-7xl font-bold text-shadow-lg text-gold-50"
-              style={{ textShadow: "4px 4px #2e1e00" }}
-            >
-              Frontend Developer.
-            </h1>
-            <p className="text-gold-100">
-              I like to craft solid and scalable frontend products with great
-              user experiences.
-            </p>
+      </nav>{" "}
+      <Suspense fallback={<div>hello</div>}>
+        <SectionRender
+          className={
+            "h-90vh w-full bg-revolver-700 flex justify-around snap-start pl-24 pr-24 pt-32 pb-32 flex-col"
+          }
+        >
+          <div className="flex justify-between flex-col h-full">
+            <div className="bg-revolver-50 blur-3xl w-64 h-16 opacity-70 relative top-56"></div>
+            <div>
+              <h1
+                className="text-7xl font-bold text-shadow-lg text-gold-50"
+                style={{ textShadow: "4px 4px #2e1e00" }}
+              >
+                Frontend Developer.
+              </h1>
+              <p className="text-gold-100">
+                I like to craft solid and scalable frontend products with great
+                user experiences.
+              </p>
+            </div>
+            <div>
+              <p className="text-end bg-gold-50 text-revolver-900 font p-2 rounded-xl">
+                Welcome to my online portfolio, find my <a href="#4th">work</a>{" "}
+                in the work section below
+              </p>
+            </div>
+            {/* <div className="photo-bg"></div> */}
           </div>
-          <div>
-            <p className="text-end bg-gold-50 text-revolver-900 font p-2 rounded-xl">
-              Welcome to my online portfolio, find my work in the work section
-              below
-            </p>
+        </SectionRender>
+      </Suspense>
+      <Suspense fallback={<div>hello</div>}>
+        <SectionRender
+          className={
+            "h-75vh w-full bg-revolver-100 flex justify-center snap-start pl-24 pr-24 pt-40 pb-32"
+          }
+        >
+          <div className="flex justify-around w-full h-full">
+            <div className="w-32 h-32 border border-revolver-400 slide-top">
+              hello world
+            </div>
+            <div className="w-32 h-32 border border-revolver-400 slide-top self-end">
+              hello world
+            </div>
           </div>
-          {/* <div className="photo-bg"></div> */}
-        </div>
-      </SectionRender>
-      <SectionRender
-        className={
-          "h-75vh w-full bg-revolver-100 flex justify-center snap-start pl-24 pr-24 pt-32 pb-32"
-        }
-      >
-        <div>hello world</div>
-      </SectionRender>
-      <SectionRender
-        className={
-          "h-75vh w-full bg-revolver-300 flex justify-center snap-start pl-24 pr-24 pt-32 pb-32"
-        }
-      >
-        <div>hello world</div>
-      </SectionRender>
-      <SectionRender
-        className={
-          "h-screen w-full bg-revolver-900 flex justify-center snap-start pl-24 pr-24 pt-32 pb-32"
-        }
-      >
-        <div>hello world</div>
-      </SectionRender>
+        </SectionRender>
+      </Suspense>
+      <Suspense fallback={<div>hello</div>}>
+        <SectionRender
+          className={
+            "h-75vh w-full bg-revolver-300 flex justify-center snap-start pl-24 pr-24 pt-32 pb-32"
+          }
+        >
+          <div>hello world</div>
+        </SectionRender>
+      </Suspense>
+      <Suspense fallback={<div>hello</div>}>
+        <SectionRender
+          className={
+            "h-screen w-full bg-revolver-900 flex justify-center snap-start pl-24 pr-24 pt-32 pb-32"
+          }
+        >
+          <div id="4th" className="scroll-smooth">
+            hello world
+          </div>
+        </SectionRender>
+      </Suspense>
     </div>
   );
 }

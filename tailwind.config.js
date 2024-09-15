@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      padding: {
+        40: "10rem", // 10rem = 40 * 0.25rem
+      },
       boxShadow: {
         "text-md": "1px 1px 2px rgba(0, 0, 0, 0.5)", // Medium shadow
         "text-lg": "2px 2px 4px rgba(0, 0, 0, 0.5)", // Large shadow
@@ -10,6 +13,7 @@ module.exports = {
       },
       height: {
         "75vh": "75vh",
+        "90vh": "90vh"
       },
       colors: {
         revolver: {
