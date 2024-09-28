@@ -2,7 +2,14 @@ import "./App.css";
 import SectionRender from "./components/sectionRender";
 import "./components/cssArt.css";
 //
+import React from "react";
+import ScrollIntoView from "react-scroll-into-view";
+
 function App() {
+  const _footRef = React.useRef(null);
+  function scrollToFooter() {
+    _footRef.current?.scrollIntoView();
+  }
   return (
     <div className="overflow-y-auto snap-y snap-mandatory scroll-smooth h-screen w-full">
       <div className="rounded-full h-20 w-20 p-3 bg-revolver-100 text-gold-300 flex justify-center items-center border-b-[86px] border-l-[60vw] border-revolver-400 fixed z-50"></div>
@@ -40,13 +47,19 @@ function App() {
           </div>
           <div>
             <p className="text-end bg-gold-50 text-revolver-900 font p-2 rounded-xl">
-              Welcome to my online portfolio, find my work in the work section
+              Welcome to my online portfolio, find my{" "}
+              <button onClick={scrollToFooter}>work</button> in the sections
               below
             </p>
           </div>
           {/* <div className="photo-bg"></div> */}
         </div>
       </SectionRender>
+      <ScrollIntoView selector="#footer">
+        {/* <button className="">
+          Jump to bottom
+        </button> */}
+      </ScrollIntoView>
       <SectionRender
         className={
           "h-75vh w-full bg-revolver-100 flex justify-center snap-start pl-24 pr-24 pt-32 pb-32"
@@ -66,7 +79,9 @@ function App() {
           "h-screen w-full bg-revolver-900 flex justify-center snap-start pl-24 pr-24 pt-32 pb-32"
         }
       >
-        <div>hello world</div>
+        <div id="footer" ref={_footRef}>
+          hello world
+        </div>
       </SectionRender>
     </div>
   );
